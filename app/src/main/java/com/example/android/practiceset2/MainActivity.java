@@ -2,12 +2,21 @@ package com.example.android.practiceset2;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
+
+import static android.icu.lang.UCharacter.toLowerCase;
+
 public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 // PASTE CODE YOU WANT TO TEST HERE
+
+        String firstName = "Lyla";
+        String lastName = "Fujiwara";
+        String contactInfo = firstName + " " + lastName;
+        contactInfo = contactInfo + " <" + toLowerCase(lastName) + "." + toLowerCase(firstName) + "@justjava.com>";
+        display(contactInfo);
     }
     /**
      * Display methods that allow the text to appear on the screen. Don't worry if you don't know
